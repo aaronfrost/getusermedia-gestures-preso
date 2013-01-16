@@ -3,4 +3,7 @@ var v = document.querySelector("#v"),
 	hl = document.querySelector('#hightlight'),
 	pixels;
 
-// Let's capture the webcam feed into the video element
+navigator.webkitGetUserMedia({video:true},function(stream){
+	v.src = URL.createObjectURL(stream);
+	v.play();
+});
