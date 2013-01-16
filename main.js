@@ -35,5 +35,22 @@ function draw(){
 		scores[i] = new Array(h);
 	}
 
+	/**
+		Pretend this represents the image w=10px and h=5px
+		[],[],[],[],[],[],[],[],[],[],[]
+		[],[],[],[],[],[],[],[],[],[],[]
+		[],[],[],[],[],[],[],[],[],[],[]
+		[],[],[],[],[],[],[],[],[],[],[]
+		[],[],[],[],[],[],[],[],[],[],[]
+	
+		-We need to fill the map array with one entry for each pixel.
+
+		-The entry will be 1 or 0: 1 if greenish, 0 if anything else
+
+		-We will do something with this map
+
+	*/
+
+
 }
 
