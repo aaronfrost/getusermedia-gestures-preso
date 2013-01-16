@@ -22,6 +22,12 @@ function draw(){
 
 	//Get the imageData from the canvas
 	var pixels = x.getImageData(0, 0, w, h);
+	//gives us back a big array, four indexs for each pixel
+	//1 - red
+	//2 - green
+	//3 - blue
+	//4 - alpha
+	//In other words, this arrow is 4 times the number of all my pixel in the canvas
 	var pixLength = pixels.data.length / 4;
 
 	//map: make two dimensional array to store which pixels detect green
