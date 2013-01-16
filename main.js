@@ -24,34 +24,8 @@ function draw(){
 	var pixels = x.getImageData(0, 0, w, h);
 	var pixLength = pixels.data.length / 4;
 
-	//map: make two dimensional array to store which pixels detect green
-	//scores: 2d array to store the 5x5 scores for each pixel. Each pixel
-	//	gets a score of the summary of the green pixels around it. It looks
-	//	at the 5 pixels to the left, right, above and below the pixel. The
-	//	pixel gets the score of the sum of that total.
-	var map = new Array(w);
-	var scores = new Array(w);
-	for(var i = 0; i < w; i++){
-		map[i] = new Array(h);
-		scores[i] = new Array(h);
-	}
-
-	/**
-		Pretend this represents the image w=10px and h=5px
-		[],[],[],[],[],[],[],[],[],[],[]
-		[],[],[],[],[],[],[],[],[],[],[]
-		[],[],[],[],[],[],[],[],[],[],[]
-		[],[],[],[],[],[],[],[],[],[],[]
-		[],[],[],[],[],[],[],[],[],[],[]
+	//NOW WHAT
+	//checkout four
 	
-		-We need to fill the map array with one entry for each pixel.
-
-		-The entry will be 1 or 0: 1 if greenish, 0 if anything else
-
-		-We will do something with this map
-
-	*/
-
-
 }
 
