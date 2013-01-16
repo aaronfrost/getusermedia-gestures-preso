@@ -7,3 +7,5 @@ navigator.webkitGetUserMedia({video:true},function(stream){
 	v.src = URL.createObjectURL(stream);
 	v.play();
 });
+
+//Let's put the video into the canvas now
