@@ -19,5 +19,9 @@ function draw(){
 
 	//Let's add some bloody stuff the analyze the image in the canvas
 
+	//Get the imageData from the canvas
+	var pixels = x.getImageData(0, 0, w, h);
+	var pixLength = pixels.data.length / 4;
+
 }
 
