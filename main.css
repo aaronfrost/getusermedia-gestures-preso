@@ -6,5 +6,8 @@
 	width:50px;
 }
 .container{
-	margin-top: 50px;
+	margin-top: 50px; 
+}
+body{
+	background-color: red;
 }

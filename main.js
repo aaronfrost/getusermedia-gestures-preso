@@ -53,6 +53,90 @@ function draw(){
 		checkout six
 	*/
 
+	//load the map with 1 and 0 for green and non-green pixels respectively
+	for(var i = 0; i < pixLength; i++){
+		var index = i*4;
+		var r = pixels.data[index],
+			g = pixels.data[index+1],
+			b = pixels.data[index+2];
+				
+		var left = Math.floor(i%w);
+		var top = Math.floor(i/w);
+			
+		if(g > 140 && r < 140 && b < 140){
+			//IT'S GREEN!	
+			pixels.data[i * 4 + 3] = 0; //it's green, make pixel invisible
+			map[left][top] = 1;			//give it a map value of 1
+		
+		}else{
+			//NOT GREEN
+			map[left][top] = 0;			//give it a map value of 0
+		}
+		
+	}
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function rgb2hsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    var min = Math.min(r, g, b),
+        max = Math.max(r, g, b),
+        delta = max - min,
+        h, s, l;
+
+    if (max == min) {
+    	h = 0;
+    } else if (r == max) {
+    	h = (g - b) / delta;
+    } else if (g == max) {
+    	h = 2 + (b - r) / delta;
+    } else if (b == max) {
+    	h = 4 + (r - g) / delta;
+    }
+
+    h = Math.min(h * 60, 360);
+
+    if (h < 0) {
+    	h += 360;
+    }
+
+    l = (min + max) / 2;
+
+    if (max == min) {
+    	s = 0;
+    } else if (l <= 0.5) {
+    	s = delta / (max + min);
+    } else {
+	    s = delta / (2 - max - min);
+    }
+
+    return [h, s * 100, l * 100];
 }
 
