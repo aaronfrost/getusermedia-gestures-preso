@@ -7,7 +7,7 @@ var v = document.querySelector("#v"),
 navigator.webkitGetUserMedia({video: true},function(stream){
 	v.src = URL.createObjectURL(stream);
 	v.play();
-	setInterval(draw,200);
+	setTimeout(draw,200);
 });
 
 
@@ -123,8 +123,26 @@ function draw(){
 		find the pixel with the highest score. That is the highest concentration
 		of Green
 		
-		Checkout eight
 	*/
+	//Find the pixel closest to the top left that has the highest score. The
+	//	pixel with the highest score is where the highlight box will appear.
+	var targetx = 0;
+	var targety = 0;
+	var targetscore = 0;
+	for(var i = 5; i < w-5; i++){
+		for(var j = 5; j < h-5; j++){
+			if(scores[i][j] > targetscore){
+				targetx = i,
+				targety = j;
+				targetscore = scores[i][j];
+			}
+		}
+	}
+	hl.style.left = ""+Math.floor(document.width*(targetx/v.width))+"px";
+	hl.style.top = ""+Math.floor(document.height*(targety/v.height))+"px";
+	x.putImageData(pixels, 0, 0);
 
+
+	setTimeout(draw,200);
 
 }
