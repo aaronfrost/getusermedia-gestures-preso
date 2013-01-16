@@ -48,7 +48,9 @@ function draw(){
 		-The entry will be 1 or 0: 1 if greenish, 0 if anything else
 
 		-We will do something with this
-
+		
+		LET'S FILL THE MAP WITH 1 and 0 for the image
+		checkout six
 	*/
 
 
