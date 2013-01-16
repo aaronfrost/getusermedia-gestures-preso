@@ -3,4 +3,4 @@ var v = document.querySelector("#v"),
 	hl = document.querySelector('#hightlight'),
 	pixels;
 
-
+// Let's capture the webcam feed into the video element
