@@ -6,8 +6,18 @@ var v = document.querySelector("#v"),
 navigator.webkitGetUserMedia({video: true},function(stream){
 	v.src = URL.createObjectURL(stream);
 	v.play();
+	setInterval(draw,200);
 });
 
-//Now let's add the video feed frames into the canvas
-// THIS IS HOW WE WILL ANALYZE THE FEED, IN THE CANVAS
+
+function draw(){
+
+	var w = v.width,
+		h = v.height;
+
+	x.drawImage(v, 0, 0, w, h);
+
+	//Let's add some bloody stuff the analyze the image in the canvas
+
+}
 
