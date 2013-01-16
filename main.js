@@ -18,6 +18,7 @@ function draw(){
 	x.drawImage(v, 0, 0, w, h);
 
 	//Let's add some bloody stuff the analyze the image in the canvas
+	//checkout five
 
 }
 
