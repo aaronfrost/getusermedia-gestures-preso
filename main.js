@@ -76,4 +76,19 @@ function draw(){
 		
 	}
 
+
+	//NOW LET'S CALCULATE EACH SCORE BY WAY OF A NEIGHBORHOOD OPERATION
+	/*
+		[],[],[],[ ],[ ],[1],[ ],[ ],[],[],[]
+		[],[],[],[ ],[ ],[1],[ ],[ ],[],[],[]
+		[],[],[],[1],[1],[?],[1],[1],[],[],[]
+		[],[],[],[ ],[ ],[1],[ ],[ ],[],[],[]
+		[],[],[],[ ],[ ],[1],[ ],[ ],[],[],[]
+	
+		You get a score of the total of the people around you
+
+		CHECK OUT SEVEN
+	*/
+
+
 }
