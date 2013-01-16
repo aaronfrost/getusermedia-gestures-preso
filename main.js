@@ -87,43 +87,7 @@ function draw(){
 	
 		You get a score of the total of the people around you
 
-	*/
-
-	//sum the score for each pixel
-	for(var j = 5; j < h-5; j++){
-		for(var i = 5; i < w-5; i++){
-			var l5 = map[i-5][j],
-				l4 = map[i-4][j],
-				l3 = map[i-3][j],
-				l2 = map[i-2][j],
-				l1 = map[i-1][j],
-				r1 = map[i+1][j],
-				r2 = map[i+2][j],
-				r3 = map[i+3][j],
-				r4 = map[i+4][j],
-				r5 = map[i+5][j],
-				u5 = map[i][j-5],
-				u4 = map[i][j-4],
-				u3 = map[i][j-3],
-				u2 = map[i][j-2],
-				u1 = map[i][j-1],
-				d1 = map[i][j+1],
-				d2 = map[i][j+1],
-				d3 = map[i][j+1],
-				d4 = map[i][j+1],
-				d5 = map[i][j+1],
-				self = map[i][j];
-			//console.log(i,j);
-			scores[i][j] = l5+l4+l3+l2+l1+r1+r2+r3+r4+r5+u5+u4+u3+u2+u1+d1+d2+d3+d4+d5+self;
-		}
-	}
-
-	/*
-		Now that we have the neighborhood scores for each pixel, we need to 
-		find the pixel with the highest score. That is the highest concentration
-		of Green
-		
-		Checkout eight
+		CHECK OUT SEVEN
 	*/
 
 
