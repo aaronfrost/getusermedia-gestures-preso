@@ -16,6 +16,8 @@ function draw(){
 		h = v.height;
 
 	x.drawImage(v, 0, 0, w, h);
+	//drawImage is overridden, so that you can resize, indent or crop 
+	//the image as well
 
 	//Let's add some bloody stuff the analyze the image in the canvas
 	//checkout five
