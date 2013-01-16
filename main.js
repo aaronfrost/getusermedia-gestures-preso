@@ -1,5 +1,6 @@
 var v = document.querySelector("#v"),
 	c = document.querySelector('#c'),
+	x = c.getContext('2d'),
 	hl = document.querySelector('#hightlight'),
 	pixels;
 
